@@ -25,7 +25,7 @@ export async function POST(req: Request) {
         // We call the custom SQL function we wrote earlier to find the closet matches
         const { data: documents, error } = await supabase.rpc('match_documents', {
             query_embedding: embedding,
-            match_threshold: 0.3,  // Lower number = more lenient matching
+            match_threshold: 0.0,  // Lower number = more lenient matching
             match_count: 5,    // Bring back the top 5 most relevant resume points
         });
 
