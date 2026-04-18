@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
         // 3. Translate the text into 3,072 dimensions using Gooogle's embedding model
         const { embedding } = await embed({
-            model: google.textEmbeddingModel('embedding-001'),
+            model: google.embeddingModel('text-embedding-001'),
             value: text,
         });
 
